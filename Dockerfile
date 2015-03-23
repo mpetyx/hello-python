@@ -9,8 +9,11 @@ RUN apt-get install -y libpq-dev python-dev
 RUN git clone https://github.com/mpetyx/smart-house-simulation-api.git /smart-house
 RUN pip install -r /smart-house/requirements.txt
 
+EXPOSE 8000
 
 #ADD . /app
 #CMD ["python", "/app/hello.py"]
 
 CMD [“python”, “/smart-house/manage.py”, “runserver”, “0.0.0.0:8000”]
+
+RUN python /smart-house/manage.py runserver 0.0.0.0:8000
