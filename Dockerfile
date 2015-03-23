@@ -16,4 +16,4 @@ EXPOSE 8000
 
 CMD [“python”, “/smart-house/manage.py”, “runserver”, “0.0.0.0:8000”]
 
-RUN python /smart-house/server/manage.py runserver 0.0.0.0:8000
+#RUN python /smart-house/server/manage.py runserver 0.0.0.0:8000
